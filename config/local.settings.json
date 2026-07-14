@@ -1,0 +1,15 @@
+{
+  "environment": "local",
+  "apiBaseUrl": "http://localhost:4177",
+  "build": "frontend-static-2026-04-17",
+  "qaAccounts": [
+    {
+      "email": "test@whs.local",
+      "password": "student_test_2026!",
+      "name": "초기 테스트 교육생",
+      "role": "student",
+      "permissions": ["whs"]
+    }
+  ]
+}
+

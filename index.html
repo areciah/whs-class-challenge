@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="화이트햇 스쿨 초기 정적 프로토타입">
+  <title>화이트햇 스쿨</title>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body class="main-page">
+  <header class="site-header" data-header>
+    <div class="top-bar">
+      <a class="external-link" href="https://bobedu.kr" target="_blank" rel="noreferrer">BoB</a>
+      <nav class="member-links" aria-label="회원 메뉴">
+        <a href="login.html" data-guest-only>로그인</a>
+        <a href="#signup" data-guest-only>회원가입</a>
+        <a href="#mypage" data-auth-only hidden><strong data-user-name>교육생</strong> 님</a>
+        <button type="button" data-logout data-auth-only hidden>로그아웃</button>
+        <span>글자크기</span>
+        <button type="button" class="font-btn" data-font="up" aria-label="글자 크게">+</button>
+        <button type="button" class="font-btn" data-font="down" aria-label="글자 작게">-</button>
+      </nav>
+    </div>
+
+    <div class="nav-shell">
+      <a class="logo" href="index.html" aria-label="화이트햇 스쿨 메인">
+        <img src="assets/logo.png" alt="화이트햇 스쿨">
+      </a>
+      <nav class="desktop-nav" aria-label="주 메뉴">
+        <a href="#about">WHS 이란?</a>
+        <a href="#apply">지원신청</a>
+        <a href="#classroom">나의 강의실</a>
+        <a href="#support">교육지원</a>
+      </nav>
+      <div class="header-actions">
+        <a class="classroom-btn" href="#classroom">나의 강의실</a>
+        <button type="button" class="icon-btn" data-search-open aria-label="검색 열기">⌕</button>
+        <button type="button" class="icon-btn menu-btn" data-menu-open aria-label="전체 메뉴 열기">☰</button>
+      </div>
+    </div>
+
+    <div class="search-panel" data-search-panel hidden>
+      <form data-search-form>
+        <label for="searchKeyword">통합검색</label>
+        <input id="searchKeyword" name="q" type="search" placeholder="검색어를 입력해주세요.">
+        <button type="submit">검색</button>
+        <button type="button" data-search-close>닫기</button>
+      </form>
+    </div>
+  </header>
+
+  <aside class="mobile-panel" data-menu aria-hidden="true">
+    <div class="mobile-panel-top">
+      <img src="assets/logo.png" alt="화이트햇 스쿨">
+      <button type="button" data-menu-close aria-label="전체 메뉴 닫기">×</button>
+    </div>
+    <nav aria-label="모바일 메뉴">
+      <a href="#about">WHS 이란?</a>
+      <a href="#apply">지원신청</a>
+      <a href="#classroom">나의 강의실</a>
+      <a href="#support">교육지원</a>
+      <a href="login.html" data-guest-only>로그인</a>
+      <button type="button" data-logout data-auth-only hidden>로그아웃</button>
+    </nav>
+  </aside>
+  <div class="panel-dim" data-dim></div>
+
+  <main>
+    <section class="hero" id="about">
+      <div class="hero-inner">
+        <p class="eyebrow">WhiteHat School</p>
+        <h1>정보보안 우수인재를 양성하는 화이트햇 스쿨</h1>
+        <p>화이트 해커 및 정보보안 인재양성을 위한 교육 프로그램과 기술 멘토링 기회를 제공합니다.</p>
+        <a class="primary-btn" href="#apply">소개 바로가기</a>
+      </div>
+    </section>
+
+    <section class="schedule-band" aria-label="주요 일정">
+      <div>
+        <span>교육생 모집</span>
+        <strong>2026-04-27 ~ 2026-05-13</strong>
+      </div>
+      <div>
+        <span>선발 과정</span>
+        <strong>2026-05-14 ~ 2026-06-02</strong>
+      </div>
+      <div class="active">
+        <span>교육 기간</span>
+        <strong>2026-06-08 ~ 2026-12-10</strong>
+      </div>
+    </section>
+
+    <section class="section" id="apply">
+      <div class="section-head">
+        <h2>지원신청</h2>
+        <p>초기 프로토타입에서는 신청 안내와 로그인 상태 확인만 제공합니다.</p>
+      </div>
+      <div class="info-grid">
+        <article>
+          <h3>온라인 교육</h3>
+          <p>보안 기초, 시스템, 네트워크, 웹 보안 학습을 위한 사전 교육 과정입니다.</p>
+        </article>
+        <article>
+          <h3>멘토링</h3>
+          <p>분야별 멘토가 교육생의 학습 방향과 프로젝트 진행을 지원합니다.</p>
+        </article>
+        <article>
+          <h3>실습 중심</h3>
+          <p>실전 문제풀이와 프로젝트를 통해 보안 역량을 단계적으로 점검합니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split" id="classroom">
+      <div>
+        <h2>나의 강의실</h2>
+        <p data-classroom-message>로그인 후 초기 강의실 상태를 확인할 수 있습니다.</p>
+      </div>
+      <a class="secondary-btn" href="login.html" data-guest-only>로그인 하기</a>
+      <button class="secondary-btn" type="button" data-auth-only data-classroom-open hidden>강의실 열기</button>
+    </section>
+
+    <section class="section notice-section" id="support">
+      <div class="section-head">
+        <h2>교육지원</h2>
+        <p>초기 버전에 남아 있던 정적 공지 목록입니다.</p>
+      </div>
+      <ul class="notice-list" data-notice-list>
+        <li><a href="#notice-1">화이트햇 스쿨 4기 교육 일정 안내</a><time>2026-06-08</time></li>
+        <li><a href="#notice-2">온라인 교육 플랫폼 점검 안내</a><time>2026-06-14</time></li>
+        <li><a href="#notice-3">멘토링 그룹 배정 안내</a><time>2026-06-21</time></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="assets/f_logo.png" alt="화이트햇 스쿨">
+    <address>
+      [나주본원] 전라남도 나주시 진흥길 9 한국인터넷진흥원<br>
+      [판교사무소] 경기도 성남시 수정구 대왕판교로 815 기업지원허브 혁신기술존 4층
+    </address>
+    <div class="related" data-related>
+      <button type="button" data-related-button>유관사이트 바로가기</button>
+      <ul hidden>
+        <li><a href="https://bobedu.kr" target="_blank" rel="noreferrer">BoB</a></li>
+        <li><a href="https://www.kisa.or.kr" target="_blank" rel="noreferrer">KISA</a></li>
+        <li><a href="https://academy.kisa.or.kr" target="_blank" rel="noreferrer">KISA 아카데미</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

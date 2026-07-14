@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="화이트햇 스쿨 초기 로그인 프로토타입">
+  <title>화이트햇 스쿨 [로그인]</title>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body class="login-page">
+  <header class="site-header compact" data-header>
+    <div class="top-bar">
+      <a class="external-link" href="https://bobedu.kr" target="_blank" rel="noreferrer">BoB</a>
+      <nav class="member-links" aria-label="회원 메뉴">
+        <a href="index.html">메인</a>
+        <a href="login.html" data-guest-only>로그인</a>
+        <a href="#mypage" data-auth-only hidden><strong data-user-name>교육생</strong> 님</a>
+        <button type="button" data-logout data-auth-only hidden>로그아웃</button>
+      </nav>
+    </div>
+    <div class="nav-shell">
+      <a class="logo" href="index.html" aria-label="화이트햇 스쿨 메인">
+        <img src="assets/logo.png" alt="화이트햇 스쿨">
+      </a>
+      <nav class="desktop-nav" aria-label="주 메뉴">
+        <a href="index.html#about">WHS 이란?</a>
+        <a href="index.html#apply">지원신청</a>
+        <a href="index.html#classroom">나의 강의실</a>
+        <a href="index.html#support">교육지원</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="login-main">
+    <section class="login-card" aria-labelledby="loginTitle">
+      <h1 id="loginTitle">로그인</h1>
+      <form data-login-form novalidate>
+        <label>
+          <span>아이디</span>
+          <input id="user_id" name="user_id" type="text" autocomplete="username" placeholder="아이디를 입력하세요.">
+        </label>
+        <label>
+          <span>비밀번호</span>
+          <input id="user_pw" name="user_pw" type="password" autocomplete="current-password" placeholder="비밀번호를 입력하세요.">
+        </label>
+        <div class="check-row">
+          <label><input id="save_id" name="save_id" type="checkbox"> 아이디 저장</label>
+          <label><input id="save_pw" name="save_pw" type="checkbox"> 비밀번호 저장</label>
+        </div>
+        <p class="form-message" data-login-message role="status" hidden></p>
+        <button class="login-submit" type="submit">로그인</button>
+      </form>
+      <div class="login-links">
+        <a href="#find">아이디/비밀번호 찾기</a>
+        <a href="#signup">회원가입</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="assets/f_logo.png" alt="화이트햇 스쿨">
+    <address>
+      [나주본원] 전라남도 나주시 진흥길 9 한국인터넷진흥원<br>
+      대표번호: 02-405-6512~5
+    </address>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
